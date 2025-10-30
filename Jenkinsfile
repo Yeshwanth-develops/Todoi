@@ -5,12 +5,12 @@ pipeline {
     DOCKER_IMAGE = "yeshsunkara06/todoi:latest"
   }
 
-  stages {
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/Yeshwanth-develops/Todoi.git'
-      }
+  stage('Checkout') {
+    steps {
+        git branch: 'main', url: 'https://github.com/Yeshwanth-develops/Todoi.git'
     }
+}
+
 
     stage('Build Docker Image') {
       steps {
